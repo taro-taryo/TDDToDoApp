@@ -27,6 +27,7 @@
 		C62BC8242CF1E42100FC9B4B /* TDDToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62BC8342CF1E42500FC9B4B /* TDDToDoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDToDoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62BC83E2CF1E42500FC9B4B /* TDDToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62BC8602CF1F55700FC9B4B /* TDDToDoApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TDDToDoApp.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		C62BC81B2CF1E42100FC9B4B = {
 			isa = PBXGroup;
 			children = (
+				C62BC8602CF1F55700FC9B4B /* TDDToDoApp.xctestplan */,
 				C62BC8262CF1E42100FC9B4B /* TDDToDoApp */,
 				C62BC8372CF1E42500FC9B4B /* TDDToDoAppTests */,
 				C62BC8412CF1E42500FC9B4B /* TDDToDoAppUITests */,
@@ -452,6 +454,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z82PG9Q7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
@@ -470,6 +473,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z82PG9Q7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
@@ -487,6 +491,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z82PG9Q7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.taro-taryo.TDDToDoApp.TDDToDoAppUITests";
@@ -503,6 +508,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z82PG9Q7U;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.taro-taryo.TDDToDoApp.TDDToDoAppUITests";
