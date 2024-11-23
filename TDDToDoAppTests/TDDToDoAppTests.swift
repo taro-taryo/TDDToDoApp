@@ -6,13 +6,18 @@
 //  
 //
 
-import Testing
+import XCTest
 @testable import TDDToDoApp
 
-struct TDDToDoAppTests {
+final class TDDToDoAppTests: XCTestCase {
+    func testAddToDo() {
+        // 初期状態の確認
+        let repository = MockToDoRepository()
+        let useCase = ToDoUseCase(repository: repository)
+        XCTAssertEqual(useCase.fetchToDos().count, 0)
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+        // ToDoを追加
+        useCase.addToDo(title: "Sample Task")
+        XCTAssertEqual(useCase.fetchToDos().count, 1)
     }
-
 }
