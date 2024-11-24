@@ -13,4 +13,5 @@ protocol ToDoRepository {
   func addToDo(_ todo: ToDo)
   func deleteToDo(id: UUID)
   func toggleToDoCompletion(id: UUID)
+  func markAsImportant(id: UUID)
 }

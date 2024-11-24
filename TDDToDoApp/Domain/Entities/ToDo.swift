@@ -12,4 +12,5 @@ struct ToDo {
   let id: UUID
   var title: String
   var isCompleted: Bool
+  var isImportant: Bool = false
 }
