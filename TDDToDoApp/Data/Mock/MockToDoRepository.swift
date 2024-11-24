@@ -35,4 +35,10 @@ final class MockToDoRepository: ToDoRepository {
     todos[index].isCompleted.toggle()
     log(action: "Toggled ToDo completion", detail: "ID \(id)")
   }
+
+  func markAsImportant(id: UUID) {
+    guard let index = todos.firstIndex(where: { $0.id == id }) else { return }
+    todos[index].isImportant = true
+    log(action: "Marked ToDo as important", detail: "ID \(id)")
+  }
 }
