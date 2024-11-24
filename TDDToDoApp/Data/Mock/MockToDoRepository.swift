@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 final class MockToDoRepository: ToDoRepository {
   private var todos: [ToDo] = []
 
@@ -17,5 +19,10 @@ final class MockToDoRepository: ToDoRepository {
   func addToDo(_ todo: ToDo) {
     print("Mock: Adding ToDo \(todo.title)")
     todos.append(todo)
+  }
+
+  func deleteToDo(id: UUID) {
+    print("Mock: Deleting ToDo with ID \(id)")
+    todos.removeAll { $0.id == id }
   }
 }
