@@ -6,7 +6,10 @@
 //
 //
 
+import Foundation
+
 protocol ToDoRepository {
   func fetchToDos() -> [ToDo]
   func addToDo(_ todo: ToDo)
+  func deleteToDo(id: UUID)
 }

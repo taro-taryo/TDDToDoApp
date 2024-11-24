@@ -17,4 +17,6 @@ class ToDoCommandService {
     let newToDo = ToDo(id: UUID(), title: title, isCompleted: false)
     repository.addToDo(newToDo)
   }
+
+  func deleteToDo(id: UUID) { repository.deleteToDo(id: id) }
 }
