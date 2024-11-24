@@ -136,3 +136,5 @@ iOSInjectionProject/
 plane.txt
 tools/project_source_compression/tmp_swift_source
 tools/project_source_compression/plane
+.tdd_state
+tools/tdd_manager
