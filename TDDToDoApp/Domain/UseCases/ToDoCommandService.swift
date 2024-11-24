@@ -19,4 +19,6 @@ class ToDoCommandService {
   }
 
   func deleteToDo(id: UUID) { repository.deleteToDo(id: id) }
+
+  func toggleToDoCompletion(id: UUID) { repository.toggleToDoCompletion(id: id) }
 }
