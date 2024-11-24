@@ -3,14 +3,14 @@
     "accessLevel" : "private"
   },
   "indentConditionalCompilationBlocks" : true,
-  "indentSwitchCaseLabels" : false,
+  "indentSwitchCaseLabels" :true,
   "indentation" : {
-    "spaces" : 4
+    "spaces" : 2
   },
-  "lineBreakAroundMultilineExpressionChainComponents" : false,
-  "lineBreakBeforeControlFlowKeywords" : false,
-  "lineBreakBeforeEachArgument" : false,
-  "lineBreakBeforeEachGenericRequirement" : false,
+  "lineBreakAroundMultilineExpressionChainComponents" : true,
+  "lineBreakBeforeControlFlowKeywords" : true,
+  "lineBreakBeforeEachArgument" : true,
+  "lineBreakBeforeEachGenericRequirement" : true,
   "lineLength" : 100,
   "maximumBlankLines" : 1,
   "multiElementCollectionTrailingCommas" : true,
@@ -20,9 +20,9 @@
     ]
   },
   "prioritizeKeepingFunctionOutputTogether" : false,
-  "respectsExistingLineBreaks" : true,
+  "respectsExistingLineBreaks" :false,
   "rules" : {
-    "AllPublicDeclarationsHaveDocumentation" : false,
+    "AllPublicDeclarationsHaveDocumentation" : true,
     "AlwaysUseLiteralForEmptyCollectionInit" : false,
     "AlwaysUseLowerCamelCase" : true,
     "AmbiguousTrailingClosureOverload" : true,
@@ -33,16 +33,16 @@
     "FullyIndirectEnum" : true,
     "GroupNumericLiterals" : true,
     "IdentifiersMustBeASCII" : true,
-    "NeverForceUnwrap" : false,
-    "NeverUseForceTry" : false,
-    "NeverUseImplicitlyUnwrappedOptionals" : false,
+    "NeverForceUnwrap" : true,
+    "NeverUseForceTry" : true,
+    "NeverUseImplicitlyUnwrappedOptionals" : true,
     "NoAccessLevelOnExtensionDeclaration" : true,
     "NoAssignmentInExpressions" : true,
     "NoBlockComments" : true,
     "NoCasesWithOnlyFallthrough" : true,
     "NoEmptyTrailingClosureParentheses" : true,
     "NoLabelsInCasePatterns" : true,
-    "NoLeadingUnderscores" : false,
+    "NoLeadingUnderscores" : true,
     "NoParensAroundConditions" : true,
     "NoPlaygroundLiterals" : true,
     "NoVoidReturnOnFunctionSignature" : true,
@@ -62,7 +62,7 @@
     "UseSynthesizedInitializer" : true,
     "UseTripleSlashForDocumentationComments" : true,
     "UseWhereClausesInForLoops" : false,
-    "ValidateDocumentationComments" : false
+    "ValidateDocumentationComments" : true
   },
   "spacesAroundRangeFormationOperators" : false,
   "tabWidth" : 8,
