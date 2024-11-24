@@ -1,0 +1,54 @@
+name: iOS Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run iOS Tests
+    runs-on: macos-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Xcode environment
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: latest
+
+      # Install dependencies (if you use Swift Package Manager)
+      - name: Resolve Swift Package Dependencies
+        run: xcodebuild -resolvePackageDependencies -project TDDToDoApp.xcodeproj
+
+      # Build and test
+      - name: Run Tests
+        run: xcodebuild test \
+              -project TDDToDoApp.xcodeproj \
+              -scheme TDDToDoApp \
+              -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+
+      # Output the results
+      - name: Test Results
+        if: always()
+        run: |
+          mkdir -p test-results
+          xcodebuild test \
+              -project TDDToDoApp.xcodeproj \
+              -scheme TDDToDoApp \
+              -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+              -resultBundlePath test-results/result.xcresult
+
+      # Archive test results for review in Actions
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: test-results/
