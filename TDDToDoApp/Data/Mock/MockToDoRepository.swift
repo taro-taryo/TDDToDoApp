@@ -10,21 +10,22 @@ import Foundation
 
 final class MockToDoRepository: ToDoRepository {
   private var todos: [ToDo] = []
-
   private func log(_ message: String) { print("[MockToDoRepository] \(message)") }
-
   func fetchToDos() -> [ToDo] {
     log("Fetching ToDos")
     return todos
   }
-
   func addToDo(_ todo: ToDo) {
     log("Adding ToDo \(todo.title)")
     todos.append(todo)
   }
-
   func deleteToDo(id: UUID) {
     log("Deleting ToDo with ID \(id)")
     todos.removeAll { $0.id == id }
+  }
+  func toggleToDoCompletion(id: UUID) {
+    guard let index = todos.firstIndex(where: { $0.id == id }) else { return }
+    todos[index].isCompleted.toggle()
+    log("Toggled ToDo completion for ID \(id)")
   }
 }
