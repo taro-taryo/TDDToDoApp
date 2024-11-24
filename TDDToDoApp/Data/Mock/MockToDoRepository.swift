@@ -7,10 +7,15 @@
 //
 
 final class MockToDoRepository: ToDoRepository {
-
   private var todos: [ToDo] = []
 
-  func fetchToDos() -> [ToDo] { return todos }
+  func fetchToDos() -> [ToDo] {
+    print("Mock: Fetching ToDos")
+    return todos
+  }
 
-  func addToDo(_ todo: ToDo) { todos.append(todo) }
+  func addToDo(_ todo: ToDo) {
+    print("Mock: Adding ToDo \(todo.title)")
+    todos.append(todo)
+  }
 }

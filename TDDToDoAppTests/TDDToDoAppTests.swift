@@ -12,13 +12,15 @@ import XCTest
 
 final class TDDToDoAppTests: XCTestCase {
   func testAddToDo() {
-    // 初期状態の確認
     let repository = MockToDoRepository()
-    let useCase = ToDoUseCase(repository: repository)
-    XCTAssertEqual(useCase.fetchToDos().count, 0)
+    let commandService = ToDoCommandService(repository: repository)
+    let queryService = ToDoQueryService(repository: repository)
+
+    // 初期状態の確認
+    XCTAssertEqual(queryService.fetchToDos().count, 0)
 
     // ToDoを追加
-    useCase.addToDo(title: "Sample Task")
-    XCTAssertEqual(useCase.fetchToDos().count, 1)
+    commandService.addToDo(title: "Sample Task")
+    XCTAssertEqual(queryService.fetchToDos().count, 1)
   }
 }
