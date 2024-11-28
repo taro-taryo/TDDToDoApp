@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Run iOS Tests
-    runs-on: macos-latest
+    runs-on: self-hosted
 
     steps:
       # Checkout the repository
@@ -33,7 +33,7 @@ jobs:
         run: xcodebuild test \
               -project TDDToDoApp.xcodeproj \
               -scheme TDDToDoApp \
-              -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+              -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
 
       # Output the results
       - name: Test Results
